@@ -13,6 +13,7 @@
 		10A627A21C988050003B7AC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10A627A01C988050003B7AC1 /* Main.storyboard */; };
 		10A627A41C988050003B7AC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10A627A31C988050003B7AC1 /* Assets.xcassets */; };
 		10A627A71C988050003B7AC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10A627A51C988050003B7AC1 /* LaunchScreen.storyboard */; };
+		10A627B01C988153003B7AC1 /* WebviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A627AF1C988153003B7AC1 /* WebviewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		10A627A31C988050003B7AC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10A627A61C988050003B7AC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10A627A81C988050003B7AC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10A627AE1C988153003B7AC1 /* WebviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebviewViewController.h; sourceTree = "<group>"; };
+		10A627AF1C988153003B7AC1 /* WebviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebviewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				10A6279D1C988050003B7AC1 /* ViewController.h */,
 				10A6279E1C988050003B7AC1 /* ViewController.m */,
 				10A627A01C988050003B7AC1 /* Main.storyboard */,
+				10A627AE1C988153003B7AC1 /* WebviewViewController.h */,
+				10A627AF1C988153003B7AC1 /* WebviewViewController.m */,
 				10A627A31C988050003B7AC1 /* Assets.xcassets */,
 				10A627A51C988050003B7AC1 /* LaunchScreen.storyboard */,
 				10A627A81C988050003B7AC1 /* Info.plist */,
@@ -110,6 +115,7 @@
 				TargetAttributes = {
 					10A627931C988050003B7AC1 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 3949BG7KHU;
 					};
 				};
 			};
@@ -151,6 +157,7 @@
 			files = (
 				10A6279F1C988050003B7AC1 /* ViewController.m in Sources */,
 				10A6279C1C988050003B7AC1 /* AppDelegate.m in Sources */,
+				10A627B01C988153003B7AC1 /* WebviewViewController.m in Sources */,
 				10A627991C988050003B7AC1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +268,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SaferiTNG/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Jeff.SaferiTNG;
@@ -272,6 +280,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SaferiTNG/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Jeff.SaferiTNG;

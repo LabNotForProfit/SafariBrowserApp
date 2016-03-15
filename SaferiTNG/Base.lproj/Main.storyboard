@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Webview View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WebviewViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,47 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hcG-sM-Ddq">
+                                <rect key="frame" x="0.0" y="100" width="600" height="500"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="edQ-XW-itF">
+                                <rect key="frame" x="282" y="58" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PlZ-YX-FDT">
+                                <rect key="frame" x="0.0" y="20" width="600" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="TCJ-Zi-gkz"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="hcG-sM-Ddq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="19N-ca-K0n"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PlZ-YX-FDT" secondAttribute="trailing" constant="-20" id="AWx-xf-qlb"/>
+                            <constraint firstItem="edQ-XW-itF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="261" id="Q3k-x6-4kk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hcG-sM-Ddq" secondAttribute="trailing" constant="-20" id="aau-DW-Ycs"/>
+                            <constraint firstItem="edQ-XW-itF" firstAttribute="top" secondItem="PlZ-YX-FDT" secondAttribute="bottom" constant="5" id="eij-eB-4Vl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="edQ-XW-itF" secondAttribute="trailing" constant="261" id="f8m-y6-gya"/>
+                            <constraint firstItem="PlZ-YX-FDT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="nOG-WL-T9d"/>
+                            <constraint firstItem="PlZ-YX-FDT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="p6g-PE-doH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hcG-sM-Ddq" secondAttribute="bottom" id="sOh-KW-hbE"/>
+                            <constraint firstItem="hcG-sM-Ddq" firstAttribute="top" secondItem="edQ-XW-itF" secondAttribute="bottom" constant="8" id="uP1-CP-h4y"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="edQ-XW-itF" id="7hh-YD-fmP"/>
+                        <outlet property="textField" destination="PlZ-YX-FDT" id="509-zq-LOM"/>
+                        <outlet property="webView" destination="hcG-sM-Ddq" id="Yow-eH-rBj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="339" y="255"/>
         </scene>
     </scenes>
 </document>
